@@ -19,29 +19,15 @@ function test(event) {
         })
         .catch((err) => console.log(err))
 
-    // window.addEventListener("DOMContentLoaded", () => {
-    //     axios.get("https://crudcrud.com/api/bda24dfab84e4846bc33165fff465d0c/SellersAdminPage")
-    //         .then((res) => {
-    //             // console.log(res);
-    //             for(var i=0;i<res.data.length;i++){
-    //                 showOnScreen(res.data[i]);
-    //             }
-    //         })
-    //         .catch((err) => console.log(err))
-    // })
-
     window.addEventListener("DOMContentLoaded", () => {
         axios.get("https://crudcrud.com/api/bda24dfab84e4846bc33165fff465d0c/SellersAdminPage")
-            .then((response) => {
-                console.log(response);
-                //On logging the response we see that the data is in the form of an Array of Objects
-                for (var i = 0; i < response.data.length; i++) {  //going through the Array of Objects
-                    showCandyOnScreen(response.data[i]);   //Showing each element of the array[basically each object]
+            .then((res) => {
+                // console.log(res);
+                for(var i=0;i<res.data.length;i++){
+                    showOnScreen(res.data[i]);
                 }
             })
-            .catch((err) => {
-                console.log(err);
-            })
+            .catch((err) => console.log(err))
     })
 
 
