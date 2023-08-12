@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Candy Shop Stock</title>
+</head>
+<body>
+    <form onsubmit="test(event)">
+        <label>Candy Name</label>
+        <input type="text" name="candy" id="candyInputTag">
+        <label>Description</label>
+        <input type="text" name="description" id="descriptionInputTag">
+        <label>Price</label>
+        <input type="text" name="price" id="priceInputTag">
+        <label>Quantity</label>
+        <input type="text" name="quantity" id="quantityInputTag">
+        <button>Add Item</button>
+    </form>
+    <ul><li>Candy Name - Description - Price - Quantity</li></ul>
+    <ul id="ListOfItems"></ul>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
